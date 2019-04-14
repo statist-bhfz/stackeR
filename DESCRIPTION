@@ -1,0 +1,24 @@
+Package: stackeR
+Type: Package
+Title: Easy model stacking
+Version: 0.1.0
+Authors@R: c(
+    person("Andrey", "Ogurtsov", email = "ogurtsov.a.b@gmail.com", role = c("aut", "cre")),
+    person("Artem", "Klevtsov", email = "a.a.klevtsov@gmail.com", role = "aut"))
+Description: Metalearning (model stacking) based on resampleR and grideR packages.
+URL: https://github.com/statist-bhfz/grideR
+BugReports: https://github.com/statist-bhfz/grideR/issues
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Depends:
+    data.table (>= 1.11.8)
+Remotes:
+    resampleR (>= 0.1.0),
+    grideR (>= 0.1.0)
+Imports:
+    xgboost (>= 0.71.2),
+    catboost (>= 0.12.2),
+    lightgbm (>= 2.2.4),
+    checkmate (>= 1.8.5)
+RoxygenNote: 6.1.1
