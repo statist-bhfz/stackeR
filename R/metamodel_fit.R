@@ -156,7 +156,7 @@ metamodel_fit <- function(data,
                                  c(list(x = x, y = y),
                                    metamodel_params))
     } else {
-        print("Unknown metamodel inteface")
+        print("Unknown metamodel interface")
         return(NULL)
     }
 
