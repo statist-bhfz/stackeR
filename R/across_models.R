@@ -3,12 +3,12 @@
 #' Fit list of models on train part and predict on validation part of one resample.
 #'
 #' @param data data.table with all input data.
-#' @param y Target variable name (character).
+#' @param target Target variable name (character).
 #' @param split Indicator variable with 1 corresponds to observations in validation dataset.
 #' @param models Named list of fit functions from \code{tuneR} package
 #' (\code{xgb_fit}, \code{lgb_fit} etc.)
 #' @param model_params List of data.table's with tunable model parameters.
-#' @param model_args List
+#' @param model_args List of unchangeable model parameters.
 #' @param preproc_funs List of preprocessing functions (one function per model)
 #' which takes data.table \code{data}+\code{split} as input and returns
 #' processed data.table with same \code{target} and \code{split} columns.
@@ -94,8 +94,7 @@ across_models <- function(data,
                           models,
                           model_params,
                           model_args,
-                          preproc_funs,
-                          ...) {
+                          preproc_funs) {
 
     assert_data_table(data)
     assert_integerish(split, len = data[, .N])
