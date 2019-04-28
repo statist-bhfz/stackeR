@@ -2,7 +2,7 @@
 % Please edit documentation in R/all_models_fit.R
 \name{all_models_fit}
 \alias{all_models_fit}
-\title{Models fitting and prediction.}
+\title{Fit all models on the entire dataset.}
 \usage{
 all_models_fit(data, target, models, model_params, model_args,
   preproc_funs)
@@ -28,7 +28,7 @@ data.table with ground truth for validation part of the resample and
 predictions from all fitted models.
 }
 \description{
-Fit list of models on train part and predict on validation part of one resample.
+Fit list of models on on the entire dataset.
 }
 \details{
 

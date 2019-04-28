@@ -1,6 +1,6 @@
-#' Models fitting and prediction.
+#' Fit all models on the entire dataset.
 #'
-#' Fit list of models on train part and predict on validation part of one resample.
+#' Fit list of models on on the entire dataset.
 #'
 #' @param data data.table with all input data.
 #' @param target Target variable name (character).
