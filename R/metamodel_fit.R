@@ -123,8 +123,10 @@ metamodel_fit <- function(data,
     assert_list(metamodel_params)
     assert_subset(metamodel_interface, c("formula", "matrix"))
     assert_true(
-        unique(sapply(list(models, model_params, model_args, preproc_funs),
-                      length)) == 1
+        length(
+            unique(
+                sapply(list(models, model_params, model_args, preproc_funs),
+                       length))) == 1
     )
 
     base_models_preds <- lapply(

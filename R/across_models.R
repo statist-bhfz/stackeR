@@ -101,8 +101,10 @@ across_models <- function(data,
     assert_list(model_args)
     assert_list(preproc_funs, types = "function")
     assert_true(
-        unique(sapply(list(models, model_params, model_args, preproc_funs),
-                      length)) == 1
+        length(
+            unique(
+                sapply(list(models, model_params, model_args, preproc_funs),
+                       length))) == 1
     )
 
     res <- data[split == 1, .(ground_truth = get(target))] # validation data
