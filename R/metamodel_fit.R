@@ -23,11 +23,9 @@
 #' @examples
 #' # Input data
 #' dt <- as.data.table(mtcars)
-#' target <- "hp"
 #'
 #' # data.table with resamples
 #' splits <- resampleR::cv_base(dt, "hp")
-#' # data.table with tunable model hyperparameters
 #'
 #' # List of models
 #' models <- list("xgboost" = xgb_fit, "catboost" = catboost_fit)
@@ -117,20 +115,16 @@ metamodel_fit <- function(data,
 
     assert_data_table(data)
     assert_true(splits[, .N] == data[, .N])
-    assert_list(models)
-    assert_list(model_params)
+    assert_list(models, types = "function", names = "named")
+    assert_list(model_params, types = "list")
     assert_list(model_args)
-    assert_list(preproc_funs)
+    assert_list(preproc_funs, types = "function")
     assert_function(metamodel)
     assert_list(metamodel_params)
-    assert_character(metamodel_interface)
+    assert_subset(metamodel_interface, c("formula", "matrix"))
     assert_true(
-        all(
-            c(length(models), length(model_params),
-              length(model_args), length(preproc_funs)) ==
-            c(length(models), length(model_params),
-              length(model_args), length(preproc_funs))
-        )
+        unique(sapply(list(models, model_params, model_args, preproc_funs),
+                      length)) == 1
     )
 
     base_models_preds <- lapply(

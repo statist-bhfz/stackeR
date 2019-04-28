@@ -46,11 +46,9 @@ Fit arbitrary metamodel on first-level models predictions.
 \examples{
 # Input data
 dt <- as.data.table(mtcars)
-target <- "hp"
 
 # data.table with resamples
 splits <- resampleR::cv_base(dt, "hp")
-# data.table with tunable model hyperparameters
 
 # List of models
 models <- list("xgboost" = xgb_fit, "catboost" = catboost_fit)
