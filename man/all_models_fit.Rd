@@ -24,11 +24,10 @@ which takes data.table \code{data}+\code{split} as input and returns
 processed data.table with same \code{target} and \code{split} columns.}
 }
 \value{
-data.table with ground truth for validation part of the resample and
-predictions from all fitted models.
+List of model objects.
 }
 \description{
-Fit list of models on on the entire dataset.
+Fit list of models on the entire dataset.
 }
 \details{
 

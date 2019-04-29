@@ -1,6 +1,6 @@
 #' Fit all models on the entire dataset.
 #'
-#' Fit list of models on on the entire dataset.
+#' Fit list of models on the entire dataset.
 #'
 #' @param data data.table with all input data.
 #' @param target Target variable name (character).
@@ -12,8 +12,7 @@
 #' which takes data.table \code{data}+\code{split} as input and returns
 #' processed data.table with same \code{target} and \code{split} columns.
 #'
-#' @return data.table with ground truth for validation part of the resample and
-#' predictions from all fitted models.
+#' @return List of model objects.
 #'
 #' @examples
 #' # Input data
