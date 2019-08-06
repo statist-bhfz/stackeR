@@ -15,8 +15,8 @@ Depends:
     data.table (>= 1.11.8),
     grideR (>= 0.1.0)
 Remotes:
-    statist-bhfz/resampleR (>= 0.1.0),
-    statist-bhfz/grideR (>= 0.1.0)
+    statist-bhfz/resampleR,
+    statist-bhfz/grideR
 Imports:
     xgboost (>= 0.71.2),
     catboost (>= 0.12.2),
