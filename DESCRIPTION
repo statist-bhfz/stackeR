@@ -15,6 +15,5 @@ Depends:
     data.table (>= 1.11.8),
     grideR (>= 0.1.0)
 Remotes:
-    statist-bhfz/resampleR,
-    statist-bhfz/grideR
+    statist-bhfz/resampleR
 RoxygenNote: 6.1.1
