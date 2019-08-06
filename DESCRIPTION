@@ -13,13 +13,8 @@ Encoding: UTF-8
 LazyData: true
 Depends:
     data.table (>= 1.11.8),
-    grideR (>= 0.1.0),
-    lightgbm (>= 2.2.4)
+    grideR (>= 0.1.0)
 Remotes:
     statist-bhfz/resampleR,
     statist-bhfz/grideR
-Imports:
-    xgboost (>= 0.71.2),
-    catboost (>= 0.12.2),
-    checkmate (>= 1.8.5)
 RoxygenNote: 6.1.1
