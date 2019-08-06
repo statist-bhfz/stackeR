@@ -14,6 +14,5 @@ LazyData: true
 Depends:
     data.table (>= 1.11.8)
 Remotes:
-    statist-bhfz/resampleR,
-    statist-bhfz/grideR
+    statist-bhfz/resampleR
 RoxygenNote: 6.1.1
