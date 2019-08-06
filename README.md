@@ -27,15 +27,15 @@ We will use `BostonHousing` data to predict median value of
 owner-occupied homes in USD 1000’s (`medv`):
 
 ``` r
-library(stackeR)
+library(grideR)
 #> Loading required package: data.table
-#> Loading required package: grideR
 #> Warning: replacing previous import 'lightgbm::getinfo' by
 #> 'xgboost::getinfo' when loading 'grideR'
 #> Warning: replacing previous import 'lightgbm::slice' by 'xgboost::slice'
 #> when loading 'grideR'
 #> Warning: replacing previous import 'lightgbm::setinfo' by
 #> 'xgboost::setinfo' when loading 'grideR'
+library(stackeR)
 library(mlbench)
 library(ggplot2)
 
@@ -118,7 +118,7 @@ metamodel_obj <- metamodel_fit(data = dt_train,
                                )
 metamodel_obj$call$formula
 #> ground_truth ~ . - split
-#> <environment: 0x5604614bc4d8>
+#> <environment: 0x557c13856770>
 metamodel_obj$coefficients
 #> (Intercept)     xgboost    catboost 
 #>  -0.9140859   0.9510828   0.1034517

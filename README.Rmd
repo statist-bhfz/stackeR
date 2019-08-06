@@ -34,6 +34,7 @@ devtools::install_github("statist-bhfz/stackeR")
 We will use `BostonHousing` data to predict median value of owner-occupied homes in USD 1000's (`medv`):
 
 ```{r}
+library(grideR)
 library(stackeR)
 library(mlbench)
 library(ggplot2)
